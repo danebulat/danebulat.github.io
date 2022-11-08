@@ -38,3 +38,13 @@ h1, h2 {
 li {
   padding-bottom: 4px;
 }
+@media (min-width: 40em) {
+  .tech-pad {
+    padding-left: 0px;
+  }
+}
+@media (min-width: 40em) {
+  .tech-pad {
+    padding-left: 24px;
+  }
+}
