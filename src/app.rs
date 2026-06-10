@@ -1,5 +1,5 @@
 use leptos::prelude::*;
-use leptos_meta::provide_meta_context;
+use leptos_meta::{Meta, provide_meta_context};
 use leptos_router::{
     StaticSegment,
     components::{Route, Router, Routes},
@@ -27,6 +27,7 @@ pub fn App() -> impl IntoView {
 #[component]
 fn Home() -> impl IntoView {
     view! {
+        <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <div class="flex flex-col min-h-screen">
             <section class="sticky top-0 z-50 bg-background">
                 <NavBar />
