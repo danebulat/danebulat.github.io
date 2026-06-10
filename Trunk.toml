@@ -1,2 +1,6 @@
+[build]
+public_url = "/"
+no_sri = true
+
 [tools]
 tailwindcss = "4.1.13"
