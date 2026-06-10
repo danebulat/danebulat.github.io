@@ -1,0 +1,26 @@
+[package]
+name = "leptos-csr-site"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+gloo-net = { version = "0.7.0", features = ["http"] }
+icons = { version = "0.18.2", features = ["leptos"] }
+leptos = { version = "0.8.19", features = ["csr"] }
+leptos_meta = "0.8.6"
+leptos_router = "0.8.13"
+leptos_ui = "0.3.22"
+strum = "0.28.0"
+tw_merge = { version = "0.1.21", features = ["variant"] }
+
+# Web System API bindings
+web-sys = { version = "0.3", features = [
+    "Element",        # For classList operations
+    "MediaQueryList", # For media query matching (prefers-color-scheme)
+    "Storage",        # For localStorage access
+    "Window",         # For window object access
+] }
+
+[package.metadata.leptos]
+tailwind-input-file = "style/input.css"

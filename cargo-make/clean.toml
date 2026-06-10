@@ -1,0 +1,38 @@
+[tasks.clean]
+dependencies = [
+    "clean-cargo",
+    "clean-trunk",
+    "clean-node_modules",
+    "clean-playwright",
+    "clean-pkg",
+]
+
+# Recursively delete all `target` directories.
+[tasks.clean-cargo]
+script = '''
+find . -type d -name target | xargs rm -fr
+'''
+
+# Recursively delete all `dist` directories.
+[tasks.clean-trunk]
+script = '''
+find . -type d -name dist | xargs rm -fr
+'''
+
+# Recursively delete all `node_modules` directories.
+[tasks.clean-node_modules]
+script = '''
+find . -type d -name node_modules | xargs rm -fr
+'''
+
+# Recursively delete playwright directories.
+[tasks.clean-playwright]
+script = '''
+find . -type d \( -name playwright-report -o -name playwright -o -name test-results \) | xargs rm -fr
+'''
+
+# Recursively delete all `pkg` directories.
+[tasks.clean-pkg]
+script = '''
+find . -type d -name pkg | xargs rm -fr
+'''

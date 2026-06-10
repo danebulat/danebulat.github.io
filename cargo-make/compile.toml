@@ -1,0 +1,12 @@
+[tasks.cargo-all-features]
+install_script = '''
+cargo install cargo-all-features
+'''
+
+# More for CI/CD pipelines to validate that your code builds correctly across 
+# all feature variations. For local development, `trunk serve` or `trunk build`
+# is what you'd typically use.
+[tasks.build]
+dependencies = ["cargo-all-features"]
+command = "cargo"
+args = ["all-features", "build"]
